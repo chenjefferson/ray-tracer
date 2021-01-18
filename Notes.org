@@ -1,0 +1,46 @@
+* Notes
+** Ray Tracing in a Weekend
+*** PPM
+    PPM stands for Portable Pixmap Format. It's a part of PNM (Portable Anymap
+    Format). It's usually an intermediate format used for image work before
+    converting to a more efficient format. It was meant to allow monochrome
+    bitmaps to be transmitted in an email message as plain ASCII text.
+
+    In ASCII, a PPM file starts with the ASCII text P3 and uses 24 bits for each
+    pixel, although some readers support 48 bits per pixel. It can use linear,
+    sRGB, or simplified gamma representation. Gamma correction is usually only
+    useful for 8-bit formats.
+
+   
+    #+BEGIN_SRC 
+    P3
+    width height
+    max value for each color
+
+    row1 col1 ex. 255 0 0
+    row1 col2
+    ...        
+    #+END_SRC
+
+    This can look like:
+
+    #+BEGIN_SRC 
+    P3
+    3 2
+    255
+
+    255 0 0
+    0 255 0
+    ...        
+    #+END_SRC
+    
+    
+    There is also the P6 format, which uses non-human readable values for the
+    color values, also separated by whitespace.
+
+    A key tradeoff is that there's no compression, and can take orders of
+    magnitude more space than an equivalent PNG in the worst cases.
+*** Vectors
+    In many systems, colors are 4D, i.e. RGBA. This possibly includes extra
+    code, such as locations, directions, and offsets. For the sake of keeping
+    things simple while learning, it's OK to use just RGB.
