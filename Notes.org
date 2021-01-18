@@ -44,3 +44,15 @@
     In many systems, colors are 4D, i.e. RGBA. This possibly includes extra
     code, such as locations, directions, and offsets. For the sake of keeping
     things simple while learning, it's OK to use just RGB.
+*** Rays
+    Rays, also known as half-lines, have an origin and a direction.
+
+    #+BEGIN_SRC
+    p(t) = A + t * B
+    #+END_SRC
+
+    Fundamentally, a ray tracer sends rays through pixels and compute what color
+    is seen.
+*** Dimensionality
+    By convention, x is right, y is up, and z is out of the screen (in other
+    words, as you go into the screen z decreases).
