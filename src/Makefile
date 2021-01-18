@@ -1,3 +1,7 @@
+rt-demo:
+	g++ rt.cpp -o rt
+	./rt >> demo.ppm
+
 vec3-ppm-demo:
 	g++ vec3ppm.cpp -o ppm
 	./ppm >> demo.ppm
@@ -7,4 +11,4 @@ ppm-demo:
 	./ppm >> demo.ppm
 
 clean:
-	rm -f *.o hello.ppm demo.ppm ppm
+	rm -f *.o hello.ppm demo.ppm ppm rt
