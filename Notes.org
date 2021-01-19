@@ -1,4 +1,5 @@
 * Notes
+Notes taken by Jefferson Chen.
 ** Ray Tracing in a Weekend
 *** PPM
     PPM stands for Portable Pixmap Format. It's a part of PNM (Portable Anymap
