@@ -56,3 +56,18 @@
 *** Dimensionality
     By convention, x is right, y is up, and z is out of the screen (in other
     words, as you go into the screen z decreases).
+*** Spheres
+    The 3D sphere equation is x*x + y*y + z*z = R*R. In vec3, this becomes
+    dot((p-c), (p-c)) = R*R.
+
+    To find out whether or not the ray touches the sphere, we check if there's a
+    point of the ray s.t.
+
+    dot((A + t*B - C), (A + t*B - C)) = R*R
+
+    AKA
+
+    t*t*dot(B,B) + 2*t*dot(B,A-C) + dot(A-C,A-C) - R*R = 0
+
+    This is a quadratic equation! We can solve whether or not roots exist by
+    using a discriminant.

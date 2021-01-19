@@ -1,3 +1,7 @@
+rt-sphere-demo:
+	g++ rt-sphere.cpp -o rt
+	./rt >> demo.ppm
+
 rt-demo:
 	g++ rt.cpp -o rt
 	./rt >> demo.ppm
